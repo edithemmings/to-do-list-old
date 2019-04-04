@@ -1,0 +1,93 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.bkgd {
+  position: fixed;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(225deg, #293033, #14664a);
+}
+
+.card {
+  background-color: #e6f2ee;
+  box-shadow: 0 4px 8px 0 #293033, 0 6px 20px 0 #293033;
+  margin: 36px auto 36px auto;
+  padding-bottom: 10px;
+  max-width: 330px;
+  border-radius: 20px;
+}
+
+h1 {
+  font-family: 'Berkshire Swash', cursive;
+  color: #293033;
+  padding: 26px 0 0 36px;
+  margin: 0;
+  font-size: 45px;
+}
+
+h2 {
+  font-family: 'Berkshire Swash', cursive;
+  color: #293033;
+  padding: 26px 0 0 36px;
+  margin: 0;
+  font-size: 40px;
+}
+
+ul{
+  margin: 20px;
+  padding: 0;
+  list-style-type: circle;
+  list-style-position: inside;
+}
+
+ul.todolist{
+  list-style-image: url('circle.png');
+}
+
+/*ul.todolist.check{
+  list-style-image: url('dot.png');
+}*/
+
+ul.done{
+  list-style-image: url('dot.png');
+}
+
+li{
+  color: #293033;
+  margin-bottom: 10px;
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+.myInput{
+  font-family: 'Roboto', sans-serif;
+  color: #293033;
+  font-size: 20px;
+  background: transparent;
+  border: none;
+}
+
+
+#completed{
+  display: ;
+}
+
+#submitButton{
+  display: ;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 370px){
+  .card{
+    margin: 36px 20px 36px 20px;
+  }
+}
