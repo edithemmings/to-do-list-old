@@ -53,15 +53,17 @@ ul.todolist{
   list-style-image: url('dot.png');
 }*/
 
-ul.done{
+#done{
+
   list-style-image: url('dot.png');
 }
 
-li{
+li, p{
   color: #293033;
   margin-bottom: 10px;
   font-size: 20px;
   vertical-align: middle;
+  cursor: pointer;
 }
 
 .myInput{
@@ -73,12 +75,18 @@ li{
 }
 
 
-#completed{
-  display: ;
+.done-card{
+  display: none;
 }
 
-#submitButton{
-  display: ;
+.show {
+  display: block;
+  background-color: #e6f2ee;
+  box-shadow: 0 4px 8px 0 #293033, 0 6px 20px 0 #293033;
+  margin: 36px auto 36px auto;
+  padding-bottom: 10px;
+  max-width: 330px;
+  border-radius: 20px;
 }
 
 
@@ -87,7 +95,7 @@ li{
 
 
 @media only screen and (max-width: 370px){
-  .card{
+  .card, .show{
     margin: 36px 20px 36px 20px;
   }
 }

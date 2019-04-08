@@ -15,29 +15,18 @@
       <div class="card">
         <h1>To Do</h1>
         <ul class='todolist' id='todolist'>
-          <li>To do item 1</li>
-          <li>To do item 2</li>
-          <li>To do item 3</li>
-          <li>
-            <input type="text" id="myInput" class="myInput" placeholder=" ...     "><input type="submit" name="" value="Enter" id='submit' onclick='addItem()'>
-          </li>
+          <input type="text" id="myInput" class="myInput" placeholder="Add new to do item..."><input type="submit" name="" value="Enter" id='submit' onclick='addItem()'>
         </ul>
       </div>
 
-      <div class="card" id='completed'>
+      <div class="card done-card" id='completed'>
         <h2>Done</h2>
-        <ul class='done'>
-          <li>Completed item 1</li>
-          <li>Completed item 2</li>
-          <li>Completed item 3</li>
-        </ul>
-
-
+        <ul id='done'></ul>
       </div>
     </div>
 
-    <div class="button">
-
+    <div class="clear" id='clear'>
+      <p>Clear completed items</p>
     </div>
 
   </body>
