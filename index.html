@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <title>To Do List</title>
     <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="script.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   </head>
@@ -15,19 +14,23 @@
       <div class="card">
         <h1>To Do</h1>
         <ul class='todolist' id='todolist'>
-          <input type="text" id="myInput" class="myInput" placeholder="Add new to do item..."><input type="submit" name="" value="Enter" id='submit' onclick='addItem()'>
+          <input type="text" class="myInput" id="myInput" placeholder="Add new to do item...">
         </ul>
       </div>
 
-      <div class="card done-card" id='completed'>
-        <h2>Done</h2>
-        <ul id='done'></ul>
+      <div class="done" id='completed'>
+        <h2 class ='done'>Done</h2>
+        <ul class = 'done' id='done'></ul>
       </div>
-    </div>
+      <div class="clear" id='clear'>
+        <p class="clear" id='clearButton'>Clear completed items</p>
+      </div>
 
-    <div class="clear" id='clear'>
-      <p>Clear completed items</p>
     </div>
-
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+      <script src='script.js'></script>
   </body>
 </html>

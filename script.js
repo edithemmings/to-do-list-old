@@ -1,31 +1,41 @@
-done = [];
+listItems = [];
 
 
 //everything starts with user input
 function addItem () {
+  //add the input to the To Do list
+    let newListItem = document.createElement('li');
+    newListItem.class = 'newtodo';
+    newListItem.innerHTML = document.getElementById('myInput').value;
+    document.getElementById('todolist').appendChild(newListItem);
+    listItems.push(newListItem);
 
-//defining some variables
-  const toDoList = document.getElementById('todolist');
-  const doneList = document.getElementById('done');
-  let myInput = document.getElementById('myInput').value;
-  let newListItem = document.createElement('li');
+    function checkOff (event){
+      $('.done').slideDown();
+      $('.clear').show();
+      document.getElementById('todolist').removeChild(event.target);
+      let newDoneItem = document.createElement('li');
+      newDoneItem.class = 'newdoneitem';
+      newDoneItem.innerHTML = event.target.innerHTML;
+      document.getElementById('done').appendChild(newDoneItem);
+     };
 
-//add the input to the To Do list
-  newListItem.class = 'newtodo';
-  newListItem.innerHTML = myInput;
-  toDoList.appendChild(newListItem);
+    function clickToCheckOff (item){
+      item.onclick = checkOff;
+    };
 
-//completing  a todo item
-  newListItem.onclick = () => {
-//remove from todo list and add to done list
-    document.getElementById('completed').className = 'done-card show';
-    toDoList.removeChild(newListItem);
-    let newDoneItem = document.createElement('li');
-    newDoneItem.class = 'newdoneitem';
-    newDoneItem.innerHTML = newListItem.innerHTML;
-    doneList.appendChild(newDoneItem);
-    done.push(newDoneItem);
-   };
-
-
+    listItems.forEach(clickToCheckOff);
 };
+
+$('#clearButton').on('click', () => {
+  $('.done').slideUp();
+  $('.clear').hide();
+  $('.done li').remove();
+});
+
+$(document).keydown(function(keyPressed) {
+   if (document.getElementById('myInput').value && keyPressed.keyCode === 13) {
+     addItem();
+     $("input[type=text], textarea").val("");
+   }
+  });
