@@ -1,7 +1,7 @@
 listItems = [];
 
 
-//everything starts with user input
+
 function addItem () {
   //add the input to the To Do list
     let newListItem = document.createElement('li');
@@ -25,7 +25,22 @@ function addItem () {
     };
 
     listItems.forEach(clickToCheckOff);
+
+ //mouseover effect
+    $('.todolist li').on('mouseenter', (event) => {
+        $(event.currentTarget).addClass('listgrow')
+      }).on('mouseleave', (event) => {
+        $(event.currentTarget).removeClass('listgrow')
+    });
+ //mousedown effect
+    $('.todolist li').on('mousedown', (event) => {
+        $(event.currentTarget).addClass('activatedot')
+      }).on('mouseup', (event) => {
+        $(event.currentTarget).removeClass('acivatedot')
+    });
+
 };
+
 
 $('#clearButton').on('click', () => {
   $('.done').slideUp();

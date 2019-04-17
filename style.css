@@ -73,6 +73,16 @@ li {
 .todolist li {
   cursor: pointer;
 }
+
+.listgrow {
+  font-size: 22px;
+  list-style-image: url('greydot.png');
+}
+
+.activatedot {
+  list-style-image: url('dot.png');
+}
+
 .myInput{
   font-family: 'Roboto', sans-serif;
   color: #293033;
