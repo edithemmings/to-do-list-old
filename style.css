@@ -16,23 +16,17 @@ body {
   background-image: linear-gradient(225deg, #293033, #14664a);
 }
 /* defining the background "cards" for todo and done lists */
-.card {
+.card, #completed {
   background-color: #e6f2ee;
   box-shadow: 0 4px 8px 0 #293033, 0 6px 20px 0 #293033;
   margin: 36px auto 36px auto;
   padding-bottom: 10px;
-  max-width: 330px;
+  max-width: 600px;
   border-radius: 20px;
 }
 
 #completed {
   display: none;
-  background-color: #e6f2ee;
-  box-shadow: 0 4px 8px 0 #293033, 0 6px 20px 0 #293033;
-  margin: 36px auto 36px auto;
-  padding-bottom: 10px;
-  max-width: 330px;
-  border-radius: 20px;
 }
 
 
@@ -89,6 +83,7 @@ li {
   font-size: 20px;
   background: transparent;
   border: none;
+
 }
 
 .clear {
@@ -110,14 +105,14 @@ p {
 
 
 @media only screen and (max-width: 768px){
-  .card {
-    width: 650px;
+  .card, #completed {
+    margin: 36px 20px 36px 20px;
   }
 }
 
 
 @media only screen and (max-width: 370px){
-  .card, .clear, #completed{
+ .clear{
     margin: 36px 20px 36px 20px;
   }
 }
